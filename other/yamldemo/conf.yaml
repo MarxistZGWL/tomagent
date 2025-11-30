@@ -1,0 +1,37 @@
+model:
+  - name: "doubao"
+    version: 1.0
+    api-key: "doubbao"
+  - name: "chatgpt"
+    version: 5.1
+    api-key: "chatgpt"
+
+tools:
+  - module: "weather"
+    name: "天气模块"
+    desc: "关于天气的函数"
+    version: 1.0
+    func:
+      - name: "get_weather"
+        desc: "获取天气"
+
+        params:
+          - name: "location"
+            type: "str"
+            desc: "位置"
+            demo: "杭州"
+
+        resp:
+          - name: "code"
+            type: "number"
+            desc: "表示状态, 200 表示成功，500 表示服务器有问题"
+            demo: ""
+          - name: "data"
+            type: "dict"
+            desc: "表示返回的答案"
+            demo: ""
+
+
+
+              
+    
